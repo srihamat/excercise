@@ -20,7 +20,18 @@ def api_roman(value):
         strTest += 'III'
     print(str(value) + ' ' + strTest)
 
+def api_roman2(num):
+    num_roman = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL'}
+    
+    result = ''
+    for value, num_roman in sorted(num_roman.items(), reverse=True):
+        while num >= value:
+            result += num_roman
+            num -= value
+    print(result) 
+    
+
 i = 1
 while (i <= 20):
-    api_roman(i)
+    api_roman2(i)
     i = i + 1
