@@ -7,7 +7,7 @@ Testing skills
      
      Output: Change
      
-2. Function to convert decimal to roman alphabet
+2. Function to convert decimal to roman alphabet (maximum 20)
 
      Input: Decimal
      
