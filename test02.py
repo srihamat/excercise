@@ -10,7 +10,7 @@ def api_roman(value):
         strTest += 'X'
     if ((value % 19) == 0):
         strTest += 'X'
-    if (((value % 10) >= 5) and ((value % 10) <= 8)):
+    if (((value % 10) >= 4) and ((value % 10) <= 8)):
         strTest += 'V'
     if ((value % 5) == 1):
         strTest += 'I'
@@ -18,14 +18,9 @@ def api_roman(value):
         strTest += 'II'
     if ((value % 5) == 3):
         strTest += 'III'
-    print(strTest)
+    print(str(value) + ' ' + strTest)
 
 i = 1
-while (i < 20):
+while (i <= 20):
     api_roman(i)
     i = i + 1
-    
-        
-    
-        
-    
