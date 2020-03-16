@@ -1,3 +1,16 @@
+def recursive_return(amount, return_money = [1000, 500, 100, 50, 20, 10, 5, 2, 1, .5, .25]):
+    for r in return_money:
+        if amount == r:
+            print('returned money: ' + str(r)) 
+            return r
+        if amount > r:            
+            print('returned money: ' + str(r))
+            return recursive_return(amount - r)      
+
+def api_exchange3(price, amount):
+    amount = amount - price    
+    recursive_return(amount)
+
 def loop_return(amount, return_money):
     while amount >= return_money and amount > 0:
         print('returned money: ' + str(return_money))
@@ -58,4 +71,4 @@ def api_exchange(price, amount):
         print('returned money: 0.25')
         amount = amount - 0.25 
 
-api_exchange2(41.25, 1000) 
+api_exchange3(41.25, 1000) 
